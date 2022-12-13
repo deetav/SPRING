@@ -1,10 +1,14 @@
 package com.deetav;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 // This will create a person beam and keep it inside the spring container
 // Person has a car -> true
 @Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Person {
     private String name;
     private int age;

@@ -14,7 +14,9 @@ public class App {
 
         // now i wish to retrieve person beam from spring container
         ApplicationContext ctx = new AnnotationConfigApplicationContext("com.deetav");
-       GreetingService service = (GreetingService) ctx.getBean("englishGreetingService");
-
+       Person person1 = (Person) ctx.getBean("person");
+       Person person2 = (Person) ctx.getBean("person");
+        System.out.println(person2.hashCode());
+        System.out.println(person1.hashCode());
     }
 }
